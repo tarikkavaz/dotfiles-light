@@ -5,7 +5,7 @@ if [[ $(command -v ruby) ]]; then
     if [[ $(command -v rbenv) ]]; then
         rbenv_version=$(rbenv version-name)
         if [[ ${rbenv_version} != "system" ]]; then
-            ruby_version="◆ ${rbenv_version}"
+            ruby_version="rb${rbenv_version}"
         fi
     fi
 
