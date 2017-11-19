@@ -4,7 +4,7 @@ if [[ $(command -v brew) ]]; then
     if [[ -f ${brew_prefix}/etc/bash_completion ]]; then
         source ${brew_prefix}/etc/bash_completion
     fi
-    
+
     # brew install coreutils, gnu-ls is installed?
     if [[ $(command -v gls) ]]; then
         alias ls="gls -h --color --group-directories-first"
