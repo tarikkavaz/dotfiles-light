@@ -126,3 +126,6 @@ if [[ ! -z ${DFL_LESS_COLOR+x} ]]; then
     source "${STARTUP_SEQUENCE}/less-colors"
 fi
 # -----------------------------------------------------------------------------
+
+export NVM_DIR=~/.nvm
+ . $(brew --prefix nvm)/nvm.sh
