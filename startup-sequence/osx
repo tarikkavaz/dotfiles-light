@@ -4,7 +4,7 @@ if [[ $(command -v brew) ]]; then
     if [[ -f ${brew_prefix}/etc/bash_completion ]]; then
         source ${brew_prefix}/etc/bash_completion
     fi
-
+    
     # brew install coreutils, gnu-ls is installed?
     if [[ $(command -v gls) ]]; then
         alias ls="gls -h --color --group-directories-first"
@@ -46,8 +46,6 @@ alias shadow_screenshot_enable='defaults write com.apple.screencapture disable-s
 alias ds_store_clear="find . -name '\.DS_Store' -print -delete"
 alias lock_screen="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
 # -----------------------------------------------------------------------------
-<<<<<<< HEAD
-=======
 
 
 # osx mojave
@@ -73,4 +71,3 @@ app_lightmode() {
     fi
 }
 # -----------------------------------------------------------------------------
->>>>>>> upstream/master
