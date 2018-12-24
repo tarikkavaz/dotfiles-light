@@ -1,4 +1,4 @@
-![Version](https://img.shields.io/badge/version-1.0.0-orange.svg)
+![Version](https://img.shields.io/badge/version-1.1.4-orange.svg)
 ![Version](https://img.shields.io/badge/platform-macOS%20%7C%20ubuntu%20%7C%20gentoo-yellow.svg)
 
 # Dotfiles LIGHT
@@ -26,6 +26,7 @@ super-light edition.
 * Autoload for `brew`: bash-completion
 * Linux style file listing if `coreutils` installed from `brew` (*folders on top!*)
 * Bunch of useful `alias` examples.
+* Now you can turn on/off light mode per Application (*macOS Mojave*)
 
 ### Common aliases
 
@@ -42,6 +43,7 @@ Try these commands:
 * `shadow_screenshot_disable`, `shadow_screenshot_enable`: Enable/disable shadows while taking screenshots!
 * `ds_store_clear`: Delete `.DS_Store` files :)
 * `lock_screen`: Going for lunch? lock it asap!
+* `app_lightmode`: Turn light mode on/off per Application. Example: `app_lightmode Mail` or `app_lightmode Mail off`
 
 ### Common functions/commands
 
@@ -50,6 +52,23 @@ Try these commands:
 * `mkdir_cd`: Create folder and cd in to it: `mkdir_cd foo`
 * `webserver`: That folder becomes a website! (*via python*): `cd /folder/;webserver`
 * `webserver_rb`: That folder becomes a website! (*via ruby*): `cd /folder/;webserver`
+
+---
+
+## What’s New ?
+
+**November 13, 2018**
+
+`HISTFILESIZE` and `HISTSIZE` are unset for unlimited history storage. You can
+override this via your `private/env` and re-assign desired values. Defaults
+were:
+
+```bash
+export HISTFILESIZE=1000000
+export HISTSIZE=1000000
+```
+
+---
 
 ## Install & Uninstall
 
@@ -221,6 +240,7 @@ export DFL_IPLIST_PROMPT_IPADDR_COLOR="${gray}"
 export DFL_DB_MYSQL_PROMPT_COLOR="${red}${blink}"                      # [MySQL]
 export DFL_DB_POSTGRESQL_PROMPT_COLOR="${red}${blink}"                 # [PG]
 export DFL_DB_REDIS_PROMPT_COLOR="${red}${blink}"                      # [REDIS]
+export DFL_DB_MONGODB_PROMPT_COLOR="${red}${blink}"                    # [MONGODB]
 
 # libs
 export DFL_VIRTUALENV_PROMPT_COLOR="${red}${bold}"                     # [⚑ resume.bilgi.edu.tr]
@@ -371,14 +391,21 @@ bash ~/Dotfiles/ps1/ip-list && echo
 
 #### `${PROMPT_DATABASE_STATUS}`
 
-OSX only, shows if **MySQL** or **PostgreSQL** or **Redis** server is running.
-Color variables are:
+OSX only, supported databases are:
+
+- MySQL
+- PostgreSQL
+- Redis
+- MongoDB
+
+shows an indicator if any of them is/are running. Color variables are:
 
 - `DFL_DB_MYSQL_PROMPT_COLOR`
 - `DFL_DB_POSTGRESQL_PROMPT_COLOR`
 - `DFL_DB_REDIS_PROMPT_COLOR`
+- `DFL_DB_MONGODB_PROMPT_COLOR`
 
-    [MySQL][PG][REDIS] # Helps you to remember is server is on/off
+    [MySQL][PG][REDIS][MONGODB]  # Helps you to remember is server is on/off
 
 #### `${PROMPT_HORIZONTAL_LINE}`
 
