@@ -43,6 +43,6 @@ if [[ $(command -v ifconfig) ]]; then
     else
         result="\xE2\x8C\x81" # [⌁]
     fi
-    printf "[${result}]"
+    printf "[${result}] "
 fi
 
