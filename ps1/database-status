@@ -12,7 +12,7 @@ get_mysql_status() {
             if [[ $DFL_DB_MYSQL_PROMPT_COLOR ]]; then
                 out="${DFL_DB_MYSQL_PROMPT_COLOR}${out}${COLOR_OFF}"
             fi
-            printf "[${out}] "
+            printf "[${out}]"
         fi
     fi
     
@@ -32,7 +32,7 @@ get_postgresql_status() {
             if [[ $DFL_DB_POSTGRESQL_PROMPT_COLOR ]]; then
                 out="${DFL_DB_POSTGRESQL_PROMPT_COLOR}${out}${COLOR_OFF}"
             fi
-            echo "[${out}] "
+            echo "[${out}]"
         fi
     fi
 }
@@ -45,7 +45,7 @@ get_redis_status() {
             if [[ $DFL_DB_REDIS_PROMPT_COLOR ]]; then
                 out="${DFL_DB_REDIS_PROMPT_COLOR}${out}${COLOR_OFF}"
             fi
-            echo "[${out}] "
+            echo "[${out}]"
         fi
     fi
 }
@@ -58,7 +58,7 @@ get_mongodb_status() {
             if [[ $DFL_DB_MONGODB_PROMPT_COLOR ]]; then
                 out="${DFL_DB_MONGODB_PROMPT_COLOR}${out}${COLOR_OFF}"
             fi
-            echo "[${out}] "
+            echo "[${out}]"
         fi
     fi
 }

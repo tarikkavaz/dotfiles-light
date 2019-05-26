@@ -197,6 +197,6 @@ if [[ $(command -v git) ]]; then
         fi
         at_sign=" ${at_sign} "
         
-        printf " [${branch}${at_sign}${commit_id}${rebasing}${anything_changed}${ahead_behind}]"
+        printf "[${branch}${at_sign}${commit_id}${rebasing}${anything_changed}${ahead_behind}]"
     fi
 fi

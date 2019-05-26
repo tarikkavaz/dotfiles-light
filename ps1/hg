@@ -82,6 +82,6 @@ if [[ $(command -v hg) ]]; then
             commit_id="${DFF_REVCONTROL_COMMIT_ID_COLOR}${commit_id}${COLOR_OFF}"
         fi
 
-        echo " [${current_branch} ${at_sign} ${commit_id}${any_untracked}${any_added}${any_modified}${any_deleted}]"
+        echo "[${current_branch} ${at_sign} ${commit_id}${any_untracked}${any_added}${any_modified}${any_deleted}]"
     fi
 fi
