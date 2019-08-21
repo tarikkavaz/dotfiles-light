@@ -135,7 +135,6 @@ fi
 if [[ ! -z ${DFL_LESS_COLOR+x} ]]; then
     source "${STARTUP_SEQUENCE}/less-colors"
 fi
-
 # -----------------------------------------------------------------------------
 
 # pipx support
