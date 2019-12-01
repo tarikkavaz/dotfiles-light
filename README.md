@@ -1,4 +1,4 @@
-![Version](https://img.shields.io/badge/version-1.1.7-orange.svg)
+![Version](https://img.shields.io/badge/version-1.1.8-orange.svg)
 ![Platform](https://img.shields.io/badge/platform-macOS%20%7C%20ubuntu%20%7C%20gentoo-yellow.svg)
 
 # Dotfiles LIGHT
@@ -57,12 +57,17 @@ Try these commands:
 
 ## What’s New ?
 
+**December 1, 2019**
+
+PostgreSQL database indicator now shows current database name if
+`$DATABASE_URL` is set!
+
 **October 16, 2019**
 
 PostgreSQL database indicator now supports Docker based PostgreSQL usage. Name
-of the container is stored under `DFL_DOCKER_PG_CONTAINER_NAME` environment variable.
-Default container name is set to: `docker-pg` (`startup-sequence/env`)
-Example docker setup:
+of the container is stored under `DFL_DOCKER_PG_CONTAINER_NAME` environment
+variable. Default container name is set to: `docker-pg`
+(`startup-sequence/env`) Example docker setup:
 
 ```bash
 $ docker pull postgres:latest
