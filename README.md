@@ -1,4 +1,4 @@
-![Version](https://img.shields.io/badge/version-1.1.8-orange.svg)
+![Version](https://img.shields.io/badge/version-1.1.9-orange.svg)
 ![Platform](https://img.shields.io/badge/platform-macOS%20%7C%20ubuntu%20%7C%20gentoo-yellow.svg)
 
 # Dotfiles LIGHT
@@ -56,6 +56,12 @@ Try these commands:
 ---
 
 ## What’s New ?
+
+**January 9, 2020**
+
+`git` prompt now checks number of changed files. If the number of files are
+more than **100**, nothing will be calculated. You can change this value
+via setting `DFL_MAX_FILECHANGES` environment variable.
 
 **December 1, 2019**
 
