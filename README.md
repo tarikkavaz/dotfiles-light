@@ -1,4 +1,4 @@
-![Version](https://img.shields.io/badge/version-1.1.9-orange.svg)
+![Version](https://img.shields.io/badge/version-1.1.10-orange.svg)
 ![Platform](https://img.shields.io/badge/platform-macOS%20%7C%20ubuntu%20%7C%20gentoo-yellow.svg)
 
 # Dotfiles LIGHT
@@ -52,10 +52,29 @@ Try these commands:
 * `mkdir_cd`: Create folder and cd in to it: `mkdir_cd foo`
 * `webserver`: That folder becomes a website! (*via python*): `cd /folder/;webserver`
 * `webserver_rb`: That folder becomes a website! (*via ruby*): `cd /folder/;webserver`
+* `mmv`: Magic Move aka `mmv`. Edit your file target name on-the-fly
 
 ---
 
 ## What’s New ?
+
+**April 22, 2020 Corona Days**
+
+Just grabbed and fixed the little function from;
+
+- https://gist.github.com/premek/6e70446cfc913d3c929d7cdbfe896fef
+- [@premek](https://github.com/premek)
+
+Try to `mv` files with `mmv`:
+
+```bash
+$ mmv /sourece/file # hit enter end give a new name!
+```
+
+Also, `app_lightmode` doesn’t work as expected on freshly installed macOS
+Catalina. Some applications are compatible but some are not...
+
+---
 
 **January 9, 2020**
 
