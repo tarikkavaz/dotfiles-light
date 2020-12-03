@@ -6,7 +6,7 @@ if [[ $(command -v python) ]]; then
     if [[ $(command -v pyenv) ]]; then
         pyenv_version=$($(command -v pyenv) version-name)
         if [[ ${pyenv_version} != "system" ]]; then
-            python_version="¶ ${pyenv_version}"
+            python_version="py:${pyenv_version}"
         fi
     fi
     if [[ ${DFL_PYTHON_PROMPT_COLOR} ]]; then
