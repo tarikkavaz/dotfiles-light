@@ -1,12 +1,14 @@
-if [[ $(command -v brew) ]]; then
-    brew_prefix=$(brew --prefix)
+# shellcheck disable=SC2148
+if [[ "$(command -v brew)" ]]; then
+    brew_prefix="$(brew --prefix)"
 
-    if [[ -f ${brew_prefix}/etc/bash_completion ]]; then
-        source ${brew_prefix}/etc/bash_completion
+    if [[ -f "${brew_prefix}/etc/bash_completion" ]]; then
+        # shellcheck source=/dev/null
+        source "${brew_prefix}/etc/bash_completion"
     fi
     
     # brew install coreutils, gnu-ls is installed?
-    if [[ $(command -v gls) ]]; then
+    if [[ "$(command -v gls)" ]]; then
         alias ls="gls -h --color --group-directories-first"
         alias ll="ls -al"
         alias la="ls -A"
@@ -20,15 +22,18 @@ else
     alias l="ls -CF"
 fi
 
-export MACOSX_VERSION=$(sw_vers -productVersion)
+MACOSX_VERSION="$(sw_vers -productVersion)"
+export MACOSX_VERSION
 
 # osx prompt shell
 # -----------------------------------------------------------------------------
+# shellcheck disable=SC2034
 PS1_OSX_BASIC="${PROMPT_MEMORY}${PROMPT_BATTERY}
 ${PROMPT_USER_AND_HOSTNAME}
 ${PROMPT_GIT}${PROMPT_HG}
 $ "
 
+# shellcheck disable=SC2034
 PS1_OSX_ADVANCED="${PROMPT_HORIZONTAL_LINE}
 ${PROMPT_MEMORY}${PROMPT_BATTERY}
 ${PROMPT_USER_AND_HOSTNAME}
@@ -48,8 +53,9 @@ alias lock_screen="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/
 # -----------------------------------------------------------------------------
 
 
-# osx mojave
+# works on osx mojave only
 # -----------------------------------------------------------------------------
+<<<<<<< HEAD
 app_lightmode() {
     if [[ ${#} -ge 1 ]]; then
         app_bundle=$(osascript -e "id of app \"${1}\"")
@@ -71,3 +77,26 @@ app_lightmode() {
     fi
 }
 # -----------------------------------------------------------------------------
+=======
+# app_lightmode() {
+#     if [[ ${#} -ge 1 ]]; then
+#         app_bundle=$(osascript -e "id of app \"${1}\"")
+#         switch="on"
+#         if [[ "${2}" == "on" || "${2}" == "off" ]]; then
+#             switch="${2}"
+#         fi
+#         echo "turning switch ${switch} to ${1}"
+#         if [[ "${switch}" == "on" ]]; then
+#             defaults write "${app_bundle}" NSRequiresAquaSystemAppearance -bool yes
+#         else
+#             defaults delete "${app_bundle}" NSRequiresAquaSystemAppearance
+#         fi
+#         echo "Please restart ${1} to see change..."
+#     else
+#         echo "usage:"
+#         echo "app_lightmode name_of_the_app [on/off]"
+#         echo "default is: on"
+#     fi
+# }
+# -----------------------------------------------------------------------------
+>>>>>>> upstream/master

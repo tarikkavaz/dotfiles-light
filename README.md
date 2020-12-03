@@ -1,4 +1,4 @@
-![Version](https://img.shields.io/badge/version-1.1.12-orange.svg)
+![Version](https://img.shields.io/badge/version-1.2.1-orange.svg)
 ![Platform](https://img.shields.io/badge/platform-macOS%20%7C%20ubuntu%20%7C%20gentoo-yellow.svg)
 
 # Dotfiles LIGHT
@@ -26,7 +26,6 @@ super-light edition.
 * Autoload for `brew`: bash-completion
 * Linux style file listing if `coreutils` installed from `brew` (*folders on top!*)
 * Bunch of useful `alias` examples.
-* Now you can turn on/off light mode per Application (*macOS Mojave*)
 
 ### Common aliases
 
@@ -43,7 +42,6 @@ Try these commands:
 * `shadow_screenshot_disable`, `shadow_screenshot_enable`: Enable/disable shadows while taking screenshots!
 * `ds_store_clear`: Delete `.DS_Store` files :)
 * `lock_screen`: Going for lunch? lock it asap!
-* `app_lightmode`: Turn light mode on/off per Application. Example: `app_lightmode Mail` or `app_lightmode Mail off`
 
 ### Common functions/commands
 
@@ -51,12 +49,18 @@ Try these commands:
 * `gz_analyse`: Analyses gzipped/non-gzipped versions of a file: `gz_analyse my_file.txt`
 * `mkdir_cd`: Create folder and cd in to it: `mkdir_cd foo`
 * `webserver`: That folder becomes a website! (*via python*): `cd /folder/;webserver`
-* `webserver_rb`: That folder becomes a website! (*via ruby*): `cd /folder/;webserver`
-* `mmv`: Magic Move aka `mmv`. Edit your file target name on-the-fly
+* `webserver_rb`: That folder becomes a website! (*via ruby*): `cd /folder/;webserver_rb`
+* `mmv`, `mcp`: Magic Move/Copy aka `mmv` or `mcp`. Edit your file target name on-the-fly!
 
 ---
 
 ## What’s New ?
+
+**November 28, 2020 Corona Days**
+
+- `DFL_BATTERY_SHOW_PERCENT_REMAINING` show remaning battery percent
+- `shellcheck -x path/to/file` validated through shellcheck, improved bash scripts
+- DROP **app_lightmode**... Doesn’t work on Catalina + Big Sur...
 
 **April 27, 2020 Corona Days**
 
@@ -284,6 +288,7 @@ export DFL_REVCONTROL_GIT_BRANCH_BEHIND_COLOR="${reverse}${white}"     # ←
 # battery
 # export DFL_BATTERY_ICON="\xE2\x8C\xA7" # for custom icon :)          # [⌧ 7:48]
 export DFL_BATTERY_PROMPT_COLOR="${yellow}"                            # [3:47]
+export DFL_BATTERY_SHOW_PERCENT_REMAINING=1                            # [⌧ 7:48 100%]
 
 # ip list
 export DFL_IPLIST_PROMPT_IFACE_COLOR="${gray}${bold}"                  # [en0:192.168.2.205,vboxnet0:192.168.33.1]
