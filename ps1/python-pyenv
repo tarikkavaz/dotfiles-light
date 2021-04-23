@@ -1,12 +1,19 @@
 #!/usr/bin/env bash
 
 if [[ $(command -v python) ]]; then
+    DFL_PYTHON_PROMPT_ICON="${DFL_PYTHON_PROMPT_ICON:-¶}"
+    DFL_PYTHON_DJANGO_PROMPT_ICON="${DFL_PYTHON_DJANGO_PROMPT_ICON:-❡}"
+
     python_version=$($(command -v python) --version 2>&1 | cut -d' ' -f2)
 
     if [[ $(command -v pyenv) ]]; then
         pyenv_version=$($(command -v pyenv) version-name)
         if [[ ${pyenv_version} != "system" ]]; then
+<<<<<<< HEAD
             python_version="py:${pyenv_version}"
+=======
+            python_version="${DFL_PYTHON_PROMPT_ICON} ${pyenv_version}"
+>>>>>>> upstream/master
         fi
     fi
     if [[ ${DFL_PYTHON_PROMPT_COLOR} ]]; then
@@ -25,7 +32,11 @@ if [[ $(command -v python) ]]; then
         fi
     fi
     if [[ -n "${django_version}" ]]; then
+<<<<<<< HEAD
         django_version="dj:${django_version}"
+=======
+        django_version="${DFL_PYTHON_DJANGO_PROMPT_ICON} ${django_version}"
+>>>>>>> upstream/master
         if [[ ${DFL_DJANGO_PROMPT_COLOR} ]]; then
             django_version="${DFL_DJANGO_PROMPT_COLOR}${django_version}${COLOR_OFF}"
         fi

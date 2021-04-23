@@ -1,3 +1,7 @@
+# shellcheck disable=SC2154,SC2148
+
+# this file is sourced by bashrc
+
 export DFL_HORIZONTAL_LINE_PROMPT_COLOR="${gray}"                      # [------]
 export DFL_BASH_VERSION_INFO_PROMPT_COLOR="${gray}"                    # [4.4.5(1)-release]
 export DFL_MEMORY_PROMPT_COLOR="${green}${bold}"                       # [2.43G]
@@ -22,6 +26,10 @@ export DFL_REVCONTROL_VERTICAL_PIPE_COLOR="${gray}"                    # |
 export DFL_REVCONTROL_GIT_BRANCH_AHEAD_COLOR="${reverse}${white}"      # →
 export DFL_REVCONTROL_GIT_BRANCH_BEHIND_COLOR="${reverse}${white}"     # ←
 
+# git
+export DFL_REVCONTROL_GIT_SHOW_DIFF_SINCE_LAST_COMMIT_COLOR="${yellow}" # (69 minutes ago)
+export DFL_REVCONTROL_GIT_SHOW_LATEST_TAG_COLOR="${green}"              # [v1.3.0]
+
 # battery
 # export DFL_BATTERY_ICON="\xE2\x8C\xA7" # for custom icon :)          # [⌧ 7:48]
 export DFL_BATTERY_PROMPT_COLOR="${yellow}"                            # [3:47]
@@ -42,3 +50,5 @@ export DFL_VIRTUALENV_PROMPT_COLOR="${red}${bold}"                     # [⚑ re
 export DFL_RBENV_PROMPT_COLOR="${yellow}"                              # [◆ 2.3.3]
 export DFL_PYTHON_PROMPT_COLOR="${blue}"                               # [¶ 2.7.12]
 export DFL_DJANGO_PROMPT_COLOR="${cyan}${underline}"                   # [❡ 1.10.1]
+export DFL_NODE_PROMPT_COLOR="${yellow}"                               # [⎆ v16.0.0]
+export DFL_GO_PROMPT_COLOR="${white}"                                  # [⍟ 1.16.3]
