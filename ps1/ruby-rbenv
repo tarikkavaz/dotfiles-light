@@ -6,11 +6,7 @@ if [[ $(command -v ruby) ]]; then
     if [[ $(command -v rbenv) ]]; then
         rbenv_version=$(rbenv version-name)
         if [[ ${rbenv_version} != "system" ]]; then
-<<<<<<< HEAD
-            ruby_version="rb:${rbenv_version}"
-=======
             ruby_version="${DFL_RBENV_PROMPT_ICON} ${rbenv_version}"
->>>>>>> upstream/master
         fi
     fi
 
