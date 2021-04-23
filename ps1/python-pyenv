@@ -28,16 +28,9 @@ if [[ $(command -v python) ]]; then
         fi
     fi
     if [[ -n "${django_version}" ]]; then
-<<<<<<< HEAD
-<<<<<<< HEAD
-        django_version="dj:${django_version}"
-=======
-        django_version="${DFL_PYTHON_DJANGO_PROMPT_ICON} ${django_version}"
->>>>>>> upstream/master
-=======
 
+        django_version="dj:${django_version}"
         django_version="${DFL_PYTHON_DJANGO_PROMPT_ICON} ${django_version}"
->>>>>>> 6fb3ca620f958e9589b50c5b7ec541c176f9efed
         if [[ ${DFL_DJANGO_PROMPT_COLOR} ]]; then
             django_version="${DFL_DJANGO_PROMPT_COLOR}${django_version}${COLOR_OFF}"
         fi
