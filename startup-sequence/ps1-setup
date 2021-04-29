@@ -64,6 +64,9 @@ PROMPT_PGVM_VERSION="\$(${PS1_PROMPTS_PATH}/pgvm-version)"
 PROMPT_DOCKER_STATUS="\$(${PS1_PROMPTS_PATH}/docker-status)"
 # -----------------------------------------------------------------------------
 
+# shellcheck disable=SC2034
+export DFL_PROMPT_BRACKET_OPEN="${DFL_PROMPT_BRACKET_OPEN:-[}"
+export DFL_PROMPT_BRACKET_CLOSE="${DFL_PROMPT_BRACKET_CLOSE:-]}"
 
 # default PS1
 # -----------------------------------------------------------------------------
