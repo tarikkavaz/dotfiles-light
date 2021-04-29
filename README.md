@@ -1,4 +1,4 @@
-![Version](https://img.shields.io/badge/version-1.5.2-orange.svg)
+![Version](https://img.shields.io/badge/version-1.5.3-orange.svg)
 ![Platform](https://img.shields.io/badge/platform-macOS%20%7C%20ubuntu%20%7C%20gentoo-yellow.svg)
 
 # Dotfiles LIGHT
@@ -67,6 +67,11 @@ Try these commands:
 ---
 
 ## What’s New ?
+
+**April 29, 2021, Corona Days**
+
+- Add `DFL_PROMPT_BRACKET_OPEN` , `DFL_PROMPT_BRACKET_CLOSE` via [PR#10](https://github.com/vigo/dotfiles-light/pull/10) 
+
 
 **April 24, 2021, Corona Days**
 
@@ -192,6 +197,13 @@ Available elements are;
     ${PROMPT_GO_VERSION}
     ${PROMPT_PGVM_VERSION}          # macOS Only
     ${PROMPT_DOCKER_STATUS}         # macOS Only
+
+Most of the command responses are placed in brackets. Such as;
+
+    [◎ 6.81G]      # macOS available memory prompt
+
+You can remove or change brackets via `DFL_PROMPT_BRACKET_OPEN` and
+`DFL_PROMPT_BRACKET_CLOSE` environment variables. Defaults are `[` and `]`.
 
 ### Color Configuration
 
