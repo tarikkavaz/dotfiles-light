@@ -1,8 +1,9 @@
 # shellcheck disable=SC2034
 export DFL_PROMPT_BRACKET_OPEN="${DFL_PROMPT_BRACKET_OPEN:-[}"
 export DFL_PROMPT_BRACKET_CLOSE="${DFL_PROMPT_BRACKET_CLOSE:-]}"
-export DFL_PROMPT_COMMA="${DFL_PROMPT_IPS_LIST_COMMA:-,}"
-export DFL_PROMPT_COLON="${DFL_PROMPT_IPS_LIST_COLON:-: }"
+export DFL_PROMPT_IPS_LIST_COMMA="${DFL_PROMPT_IPS_LIST_COMMA:-,}"
+export DFL_PROMPT_IPS_LIST_COLON="${DFL_PROMPT_IPS_LIST_COLON:-: }"
+export DFL_PROMPT_IPS_LIST_SPACE="${DFL_PROMPT_IPS_LIST_SPACE:-}"
 
 # shellcheck disable=SC2148
 # -----------------------------------------------------------------------------
