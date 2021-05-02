@@ -24,7 +24,7 @@ print_horizontal_line(){
 # shellcheck disable=SC2148
 break_if_in_git_repo(){
     if [[ ! -z "$(git rev-parse --git-dir 2>/dev/null)" ]]; then
-        printf "\n${DFL_PROMPT_MIDDLE}"
+        printf "\n${DFL_PROMPT_MID}"
     fi
 }
 
