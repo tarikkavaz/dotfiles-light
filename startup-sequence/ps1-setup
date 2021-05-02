@@ -4,23 +4,36 @@ export DFL_PROMPT_BRACKET_CLOSE="${DFL_PROMPT_BRACKET_CLOSE:-]}"
 export DFL_PROMPT_IPS_LIST_COMMA="${DFL_PROMPT_IPS_LIST_COMMA:-,}"
 export DFL_PROMPT_IPS_LIST_COLON="${DFL_PROMPT_IPS_LIST_COLON:-: }"
 export DFL_PROMPT_IPS_LIST_SPACE="${DFL_PROMPT_IPS_LIST_SPACE:-}"
+export DFL_PROMPT_HORIZONTAL_LINE="${DFL_PROMPT_HORIZONTAL_LINE:-}"
+export DFL_PROMPT_TOP="${DFL_PROMPT_TOP: }"
+export DFL_PROMPT_MID="${DFL_PROMPT_MID: }"
+export DFL_PROMPT_END="${DFL_PROMPT_END: }"
 
 # shellcheck disable=SC2148
 # -----------------------------------------------------------------------------
 print_horizontal_line(){
     cols=${COLUMNS:-$(tty -s && tput cols)}
-    hline=$(printf "%*s\n" "${cols}" "" | tr " " -)
+    hline=$(printf "%*s\n" "${cols}" "" | tr " " ${DFL_PROMPT_HORIZONTAL_LINE})
     if [[ $DFL_HORIZONTAL_LINE_PROMPT_COLOR ]]; then
         hline="${DFL_HORIZONTAL_LINE_PROMPT_COLOR}${hline}${COLOR_OFF}"
     fi
     echo -e "${hline}"
 }
-# -----------------------------------------------------------------------------
 
+# -----------------------------------------------------------------------------
+# shellcheck disable=SC2148
+break_if_in_git_repo(){
+    if [[ ! -z "$(git rev-parse --git-dir 2>/dev/null)" ]]; then
+        printf "\n${DFL_PROMPT_MIDDLE}"
+    fi
+}
 
 # -----------------------------------------------------------------------------
 # shellcheck disable=SC2034
 PROMPT_HORIZONTAL_LINE="\$(print_horizontal_line)"
+
+# shellcheck disable=SC2034
+PROMPT_GIT_BREAK="\$(break_if_in_git_repo)"
 
 # shellcheck disable=SC2034
 PROMPT_BASH_VERSION_INFO="\$(${PS1_PROMPTS_PATH}/bash-version-info)"
