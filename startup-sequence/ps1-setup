@@ -2,10 +2,8 @@
 export DFL_PROMPT_BRACKET_OPEN="${DFL_PROMPT_BRACKET_OPEN:-[}"
 export DFL_PROMPT_BRACKET_CLOSE="${DFL_PROMPT_BRACKET_CLOSE:-]}"
 export DFL_PROMPT_IPS_LIST_COMMA="${DFL_PROMPT_IPS_LIST_COMMA:-,}"
-export DFL_PROMPT_IPS_LIST_COLON="${DFL_PROMPT_IPS_LIST_COLON:-: }"
-export DFL_PROMPT_IPS_LIST_SPACE="${DFL_PROMPT_IPS_LIST_SPACE:-}"
-export DFL_PROMPT_GIT_SPACE="${DFL_PROMPT_IPS_LIST_SPACE:- }"
-export DFL_PROMPT_GIT_AT_SIGN="${DFL_PROMPT_IPS_LIST_SPACE:-@}"
+export DFL_PROMPT_IPS_LIST_COLON="${DFL_PROMPT_IPS_LIST_COLON:-:}"
+export DFL_PROMPT_GIT_AT_SIGN="${DFL_PROMPT_IPS_LIST_SPACE:- @ }"
 export DFL_PROMPT_HORIZONTAL_LINE="${DFL_PROMPT_HORIZONTAL_LINE:-}"
 export DFL_PROMPT_TOP_LINE_FIRST_CHAR="${DFL_PROMPT_TOP_LINE_FIRST_CHAR: }"
 export DFL_PROMPT_MID_LINE_FIRST_CHAR="${DFL_PROMPT_MID_LINE_FIRST_CHAR: }"
@@ -21,14 +19,6 @@ print_horizontal_line(){
         hline="${DFL_HORIZONTAL_LINE_PROMPT_COLOR}${hline}${COLOR_OFF}"
     fi
     echo -e "${hline}"
-}
-
-# -----------------------------------------------------------------------------
-# shellcheck disable=SC2148
-break_if_in_git_repo(){
-    if [[ ! -z "$(git rev-parse --git-dir 2>/dev/null)" ]]; then
-        printf "\n${DFL_PROMPT_GIT_LINE_FIRST_CHAR}"
-    fi
 }
 
 # -----------------------------------------------------------------------------
