@@ -14,7 +14,11 @@ export DFL_PROMPT_END_LINE_FIRST_CHAR="${DFL_PROMPT_END_LINE_FIRST_CHAR: }"
 # -----------------------------------------------------------------------------
 print_horizontal_line(){
     cols=${COLUMNS:-$(tty -s && tput cols)}
+<<<<<<< HEAD
     hline=$(printf "%*s\n" "${cols}" "" | tr " " ${DFL_PROMPT_HORIZONTAL_LINE})
+=======
+    hline=$(printf "%*s\n" "${cols}" "" | tr " " ${DFL_PROMPT_HORIZONTAL_LINE:--})
+>>>>>>> upstream/master
     if [[ $DFL_HORIZONTAL_LINE_PROMPT_COLOR ]]; then
         hline="${DFL_HORIZONTAL_LINE_PROMPT_COLOR}${hline}${COLOR_OFF}"
     fi
