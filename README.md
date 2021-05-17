@@ -1,7 +1,11 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 ![Version](https://img.shields.io/badge/version-1.5.4-orange.svg)
 =======
 ![Version](https://img.shields.io/badge/version-2.0.0-orange.svg)
+>>>>>>> upstream/master
+=======
+![Version](https://img.shields.io/badge/version-2.0.1-orange.svg)
 >>>>>>> upstream/master
 ![Platform](https://img.shields.io/badge/platform-macOS%20%7C%20ubuntu%20%7C%20gentoo-yellow.svg)
 ![Shellcheck](https://github.com/vigo/dotfiles-light/actions/workflows/shellcheck.yml/badge.svg)
@@ -77,19 +81,24 @@ Try these commands:
 
 ## What’s New ?
 
+**May 17, 2021, Corona Days**
+
+Add customization for git PS1 variables;
+
+- `DFL_GIT_SIGN_RIGHT_ARROW`, default: `→`
+- `DFL_GIT_SIGN_LEFT_ARROW`, default: `←`
+- `DFL_GIT_SYMBOL_UNCTRACKED`, default: `□`
+- `DFL_GIT_SYMBOL_ADDED`, default: `■`
+- `DFL_GIT_SYMBOL_MODIFIED`: default: `◆`
+- `DFL_GIT_SYMBOL_RENAMED`: default: `◇`
+- `DFL_GIT_SYMBOL_DELETED`: default: `◌`
+- `DFL_GIT_SYMBOL_TYPECHANGED`: default: `❖`
+
 **May 10 2021, Corona Days**
 
 - Remove `pyenv`, `rbenv`, `pip` autoloader
 
 You can add required config under `private/` folder for pyenv, rbenv etc.
-
-**May 9, 2021, Corona Days**
-
-- Upgrade bash-completion scripts from https://github.com/mernen/completion-ruby
-- Add github action, shellcheck
-- Add `DFL_PROMPT_IPS_LIST_SEPERATOR` and `DFL_PROMPT_IPS_LIST_COLON` for `PROMPT_IPS_LIST`
-- Add `DFL_PROMPT_HORIZONTAL_LINE` for custom char option for `PROMPT_HORIZONTAL_LINE`
-- Add `DFL_PROMPT_GIT_AT_SIGN` for custom look and feel
 
 Change log is available [here](CHANGELOG.md)
 
